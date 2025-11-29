@@ -1,0 +1,93 @@
+# UAF Colors ![](reference/figures/uafcolors.png)
+
+University of Alaska Fairbanks color schemes for **R** and **Stata**.
+
+Colors from [UAF Brand
+Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php).
+
+------------------------------------------------------------------------
+
+## R Package
+
+### Installation
+
+``` r
+# install.packages("devtools")
+devtools::install_github("canhr/uafcolors")
+```
+
+### Usage
+
+``` r
+library(uafcolors)
+
+# All colors
+barplot(1:12, col = uafcolors())
+
+# Single color
+hist(rnorm(100), col = uafcolors("blue"))
+
+# ggplot2
+library(ggplot2)
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point() +
+  scale_color_uaf() +
+  theme_uaf()
+```
+
+See [Basic Use](articles/basicuse.md) for more examples.
+
+------------------------------------------------------------------------
+
+## Stata Scheme
+
+### Installation
+
+``` stata
+net install uaf, from("https://raw.githubusercontent.com/canhr/uaf-graph-scheme/main/")
+```
+
+### Usage
+
+``` stata
+set scheme uaf
+
+sysuse auto, clear
+scatter mpg weight
+graph bar (mean) mpg, over(foreign)
+histogram mpg
+```
+
+See [Stata Usage](articles/stata.md) for more examples.
+
+------------------------------------------------------------------------
+
+## Colors
+
+| Color      | Hex      | Preview |
+|------------|----------|---------|
+| Blue       | \#236192 |         |
+| Gold       | \#FFCD00 |         |
+| Green      | \#71984A |         |
+| Orange     | \#DF6A2E |         |
+| Cyan       | \#87D1E6 |         |
+| Magenta    | \#F45197 |         |
+| Dark Blue  | \#111C4E |         |
+| Brown      | \#774D28 |         |
+| Dark Grey  | \#66665D |         |
+| Custard    | \#F6DFA4 |         |
+| Light Blue | \#C4CFDA |         |
+| Light Grey | \#C8C8C8 |         |
+
+------------------------------------------------------------------------
+
+CANHR - Center for Alaska Native Health Research
+
+# 
+
+# Articles
+
+### Articles
+
+- [Basic Use](basicuse.md):
+- [Stata Usage](stata.md):

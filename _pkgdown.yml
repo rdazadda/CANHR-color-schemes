@@ -1,0 +1,33 @@
+url: ~
+template:
+  bootstrap: 5
+  bslib:
+    primary: "#236192"
+    base_font:
+      google: Inter
+    code_font:
+      google: JetBrains Mono
+
+home:
+  title: UAF Colors for R and Stata
+
+navbar:
+  bg: light
+  structure:
+    left: [intro, reference, articles]
+    right: [github]
+
+articles:
+- title: Articles
+  navbar: ~
+  contents:
+  - basicuse
+  - stata
+
+footer:
+  structure:
+    left: [canhr]
+    right: [source]
+  components:
+    canhr: CANHR - Center for Alaska Native Health Research
+    source: "[UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php)"

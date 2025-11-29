@@ -1,0 +1,93 @@
+---
+title: "Basic Use"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Basic Use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 6, fig.height = 4)
+library(uafcolors)
+```
+
+## Installation
+
+```{r eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("canhr/uafcolors")
+```
+
+## Load Package
+
+```{r}
+library(uafcolors)
+```
+
+## Get Colors
+
+```{r}
+# All colors
+uafcolors()
+
+# Single color
+uafcolors("blue")
+uafcolors("gold")
+```
+
+## Base R Graphics
+
+```{r}
+barplot(1:12, col = uafcolors(), border = NA, main = "UAF Colors")
+```
+
+```{r}
+hist(iris$Sepal.Length, col = uafcolors("blue"), border = "white",
+     main = "Histogram", xlab = "Sepal Length")
+```
+
+```{r}
+plot(iris$Sepal.Length, iris$Sepal.Width,
+     col = uafcolors()[as.numeric(iris$Species)],
+     pch = 19, main = "Scatter Plot",
+     xlab = "Sepal Length", ylab = "Sepal Width")
+```
+
+## ggplot2
+
+```{r message=FALSE}
+library(ggplot2)
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point(size = 3) +
+  scale_color_uaf() +
+  theme_uaf() +
+  labs(title = "Iris Data")
+```
+
+```{r}
+ggplot(mpg, aes(class, fill = class)) +
+  geom_bar() +
+  scale_fill_uaf() +
+  theme_uaf() +
+  labs(title = "Vehicle Classes") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Color Reference
+
+| Color | Hex | Code |
+|-------|-----|------|
+| Blue | #236192 | `uafcolors("blue")` |
+| Gold | #FFCD00 | `uafcolors("gold")` |
+| Green | #71984A | `uafcolors("green")` |
+| Orange | #DF6A2E | `uafcolors("orange")` |
+| Cyan | #87D1E6 | `uafcolors("cyan")` |
+| Magenta | #F45197 | `uafcolors("magenta")` |
+| Dark Blue | #111C4E | `uafcolors("dark blue")` |
+| Brown | #774D28 | `uafcolors("brown")` |
+| Dark Grey | #66665D | `uafcolors("dark grey")` |
+| Custard | #F6DFA4 | `uafcolors("custard")` |
+| Light Blue | #C4CFDA | `uafcolors("light blue")` |
+| Light Grey | #C8C8C8 | `uafcolors("light grey")` |
