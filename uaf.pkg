@@ -1,0 +1,11 @@
+v 3
+d UAF Color Scheme for Stata
+d
+d University of Alaska Fairbanks official color palette for Stata graphs.
+d
+d Authors: Raymond Dacosta Azadda, Andrew Grogan-Kaylor, KyungSook Lee
+d Support: rdazadda@alaska.edu
+d
+d Distribution-Date: 20251129
+d
+f scheme-uaf.scheme
