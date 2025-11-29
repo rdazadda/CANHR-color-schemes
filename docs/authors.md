@@ -11,7 +11,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/rdazadda/UAF-color-scheme/blob/HEAD/inst/CITATION)
+[`inst/CITATION`](https://github.com/rdazadda/UAF-color-schemes/blob/HEAD/inst/CITATION)
 
 Azadda, R. D., Grogan-Kaylor, A., & Lee, K. (2025). uafcolors:
 University of Alaska Fairbanks Colors for R and Stata. R package version
