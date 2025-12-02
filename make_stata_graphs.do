@@ -1,6 +1,6 @@
-* UAF Scheme Example Graphs
+* CANHR Scheme Example Graphs
 
-set scheme uaf
+set scheme canhr
 capture mkdir "vignettes/stata_files"
 
 * Scatter Plot

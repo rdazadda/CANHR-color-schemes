@@ -1,4 +1,4 @@
-url: https://rdazadda.github.io/UAF-color-schemes/
+url: https://rdazadda.github.io/CANHR-color-schemes/
 template:
   bootstrap: 5
   bslib:
@@ -9,7 +9,7 @@ template:
       google: JetBrains Mono
 
 home:
-  title: UAF Colors for R and Stata
+  title: CANHR Colors for R and Stata
 
 navbar:
   bg: light
@@ -30,4 +30,3 @@ footer:
     right: [source]
   components:
     developed: Developed by the Numbers Team at CANHR
-    source: "[UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php)"

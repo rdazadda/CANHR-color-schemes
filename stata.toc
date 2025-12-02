@@ -1,8 +1,8 @@
 v 3
-d UAF Color Scheme for Stata
-d University of Alaska Fairbanks official colors
+d CANHR Color Scheme for Stata
+d Center for Alaska Native Health Research official colors
 d
 d Authors: Raymond Dacosta Azadda, Andrew Grogan-Kaylor, KyungSook Lee
 d Contact: rdazadda@alaska.edu
 d
-p uaf UAF graph scheme
+p canhr CANHR graph scheme

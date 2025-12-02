@@ -1,9 +1,9 @@
-/* UAF Colors - Clean Professional Theme */
+/* CANHR Colors - Clean Professional Theme */
 
 :root {
-  --uaf-blue: #236192;
-  --uaf-gold: #FFCD00;
-  --uaf-dark-blue: #111C4E;
+  --canhr-blue: #236192;
+  --canhr-gold: #FFCD00;
+  --canhr-dark-blue: #111C4E;
   --text-dark: #333;
 }
 
@@ -20,7 +20,7 @@ body {
 
 .navbar-brand {
   font-weight: 700 !important;
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
 }
 
 .nav-link {
@@ -29,13 +29,13 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
 }
 
 /* Page Header - Dark background needs white text */
 .page-header {
-  background: linear-gradient(135deg, var(--uaf-blue) 0%, var(--uaf-dark-blue) 100%) !important;
-  border-bottom: 4px solid var(--uaf-gold) !important;
+  background: linear-gradient(135deg, var(--canhr-blue) 0%, var(--canhr-dark-blue) 100%) !important;
+  border-bottom: 4px solid var(--canhr-gold) !important;
   padding: 2.5rem 0 !important;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .page-header a:hover {
-  color: var(--uaf-gold) !important;
+  color: var(--canhr-gold) !important;
 }
 
 /* Main Content Headings */
@@ -66,19 +66,19 @@ main h1, main h2, main h3, main h4, main h5 {
 }
 
 main h2 {
-  border-bottom: 3px solid var(--uaf-gold) !important;
+  border-bottom: 3px solid var(--canhr-gold) !important;
   padding-bottom: 0.5rem !important;
   margin-top: 2rem !important;
 }
 
 /* Links in content */
 main a {
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
   text-decoration: none;
 }
 
 main a:hover {
-  color: var(--uaf-dark-blue) !important;
+  color: var(--canhr-dark-blue) !important;
   text-decoration: underline;
 }
 
@@ -106,7 +106,7 @@ table {
 }
 
 thead {
-  background: var(--uaf-blue) !important;
+  background: var(--canhr-blue) !important;
 }
 
 th {
@@ -128,7 +128,7 @@ tr:hover {
 .sidebar h2 {
   color: var(--text-dark) !important;
   font-size: 1rem;
-  border-bottom: 2px solid var(--uaf-gold) !important;
+  border-bottom: 2px solid var(--canhr-gold) !important;
   padding-bottom: 0.3rem;
 }
 
@@ -137,7 +137,7 @@ tr:hover {
 }
 
 .sidebar a:hover {
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
 }
 
 /* Footer */
@@ -149,7 +149,7 @@ footer {
 }
 
 footer a {
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
 }
 
 /* Images */
@@ -166,7 +166,7 @@ img {
 
 .dropdown-item:hover {
   background: #f8f9fa;
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
 }
 
 /* Reference page */
@@ -186,7 +186,7 @@ img {
 
 /* Section anchors */
 .anchor {
-  color: var(--uaf-gold) !important;
+  color: var(--canhr-gold) !important;
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -202,6 +202,6 @@ h3:hover .anchor {
 }
 
 #toc a.active {
-  color: var(--uaf-blue) !important;
+  color: var(--canhr-blue) !important;
   font-weight: 600;
 }

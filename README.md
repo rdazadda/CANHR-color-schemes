@@ -1,8 +1,6 @@
-# UAF Colors <img src="man/figures/uafcolors.png" align="right" width="200"/>
+# CANHR Colors <img src="man/figures/canhrcolors.png" align="right" width="200"/>
 
-University of Alaska Fairbanks color schemes for **R** and **Stata**.
-
-Colors from [UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guidelines/design/color.php).
+CANHR color scheme for **R** and **Stata**.
 
 ---
 
@@ -12,26 +10,26 @@ Colors from [UAF Brand Guidelines](https://www.uaf.edu/universityrelations/guide
 
 ```r
 # install.packages("devtools")
-devtools::install_github("rdazadda/UAF-color-schemes")
+devtools::install_github("rdazadda/CANHR-color-schemes")
 ```
 
 ### Usage
 
 ```r
-library(uafcolors)
+library(canhrcolors)
 
 # All colors
-barplot(1:12, col = uafcolors())
+barplot(1:12, col = canhrcolors())
 
 # Single color
-hist(rnorm(100), col = uafcolors("blue"))
+hist(rnorm(100), col = canhrcolors("blue"))
 
 # ggplot2
 library(ggplot2)
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   geom_point() +
-  scale_color_uaf() +
-  theme_uaf()
+  scale_color_canhr() +
+  theme_canhr()
 ```
 
 See [Basic Use](articles/basicuse.html) for more examples.
@@ -43,13 +41,13 @@ See [Basic Use](articles/basicuse.html) for more examples.
 ### Installation
 
 ```stata
-net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-schemes/main/")
+net install canhr, from("https://raw.githubusercontent.com/rdazadda/CANHR-color-schemes/main/")
 ```
 
 ### Usage
 
 ```stata
-set scheme uaf
+set scheme canhr
 
 sysuse auto, clear
 scatter mpg weight

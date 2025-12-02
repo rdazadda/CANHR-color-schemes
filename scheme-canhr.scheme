@@ -1,6 +1,6 @@
-* UAF Color Scheme for Stata
-* University of Alaska Fairbanks Official Colors
-* scheme-uaf.scheme
+* CANHR Color Scheme for Stata
+* Center for Alaska Native Health Research Official Colors
+* scheme-canhr.scheme
 
 #include s2color
 
@@ -19,7 +19,7 @@
 * Light Grey:200 200 200  (#C8C8C8)
 
 sequence 1210
-label "uaf"
+label "canhr"
 
 * Background colors
 color background             white

@@ -4,21 +4,21 @@
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("rdazadda/UAF-color-schemes")
+devtools::install_github("rdazadda/CANHR-color-schemes")
 ```
 
 ## Load Package
 
 ``` r
-library(uafcolors)
+library(canhrcolors)
 library(ggplot2)
 ```
 
 ## Get Colors
 
 ``` r
-# All 12 UAF colors
-uafcolors()
+# All 12 CANHR colors
+canhrcolors()
 ```
 
     ##  [1] "#236192" "#FFCD00" "#71984A" "#DF6A2E" "#87D1E6" "#F45197" "#111C4E"
@@ -26,13 +26,13 @@ uafcolors()
 
 ``` r
 # Single color by name
-uafcolors("blue")
+canhrcolors("blue")
 ```
 
     ## [1] "#236192"
 
 ``` r
-uafcolors("gold")
+canhrcolors("gold")
 ```
 
     ## [1] "#FFCD00"
@@ -56,8 +56,8 @@ alaska_temps <- data.frame(
 ggplot(alaska_temps, aes(x = Month, y = Temperature, color = City, group = City)) +
   geom_line(linewidth = 1.2) +
   geom_point(size = 3) +
-  scale_color_uaf() +
-  theme_uaf(base_size = 12) +
+  scale_color_canhr() +
+  theme_canhr(base_size = 12) +
   labs(
     title = "Average Monthly Temperatures in Alaska",
     subtitle = "Temperature variation across major cities",
@@ -69,7 +69,7 @@ ggplot(alaska_temps, aes(x = Month, y = Temperature, color = City, group = City)
 
 ![](basicuse_files/figure-html/unnamed-chunk-4-1.png)
 
-## UAF Research Funding
+## Research Funding
 
 ``` r
 research <- data.frame(
@@ -84,11 +84,11 @@ ggplot(research, aes(x = Department, y = Funding, fill = Department)) +
   geom_col(width = 0.7, show.legend = FALSE) +
   geom_text(aes(label = paste0("$", Funding, "M")),
             hjust = -0.1, size = 4, color = "#236192") +
-  scale_fill_uaf() +
-  theme_uaf(base_size = 12) +
+  scale_fill_canhr() +
+  theme_canhr(base_size = 12) +
   coord_flip() +
   labs(
-    title = "UAF Research Funding by Department",
+    title = "Research Funding by Department",
     subtitle = "Annual grant funding in millions (FY 2024)",
     x = NULL, y = "Funding (Millions USD)"
   ) +
@@ -113,8 +113,8 @@ enrollment <- data.frame(
 ggplot(enrollment, aes(x = Year, y = Students/1000, color = Campus)) +
   geom_line(linewidth = 1.5) +
   geom_point(size = 4) +
-  scale_color_uaf() +
-  theme_uaf(base_size = 12) +
+  scale_color_canhr() +
+  theme_canhr(base_size = 12) +
   labs(
     title = "University of Alaska Enrollment Trends",
     subtitle = "Student headcount by campus (2015-2024)",
@@ -141,8 +141,8 @@ wildlife <- data.frame(
 
 ggplot(wildlife, aes(x = Region, y = Population, fill = Species)) +
   geom_col(position = "dodge", width = 0.8) +
-  scale_fill_uaf() +
-  theme_uaf(base_size = 11) +
+  scale_fill_canhr() +
+  theme_canhr(base_size = 11) +
   labs(
     title = "Alaska Wildlife Populations by Region",
     subtitle = "Estimated population counts (thousands)",
@@ -157,26 +157,26 @@ ggplot(wildlife, aes(x = Region, y = Population, fill = Species)) +
 ## Base R Graphics
 
 ``` r
-# Display all 12 UAF colors
-barplot(rep(1, 12), col = uafcolors(), border = NA,
-        main = "The 12 Official UAF Colors", yaxt = "n")
+# Display all 12 CANHR colors
+barplot(rep(1, 12), col = canhrcolors(), border = NA,
+        main = "The 12 Official CANHR Colors", yaxt = "n")
 ```
 
 ![](basicuse_files/figure-html/unnamed-chunk-8-1.png)
 
 ## Color Reference
 
-| Color      | Hex      | Code                      |
-|------------|----------|---------------------------|
-| Blue       | \#236192 | `uafcolors("blue")`       |
-| Gold       | \#FFCD00 | `uafcolors("gold")`       |
-| Green      | \#71984A | `uafcolors("green")`      |
-| Orange     | \#DF6A2E | `uafcolors("orange")`     |
-| Cyan       | \#87D1E6 | `uafcolors("cyan")`       |
-| Magenta    | \#F45197 | `uafcolors("magenta")`    |
-| Dark Blue  | \#111C4E | `uafcolors("dark blue")`  |
-| Brown      | \#774D28 | `uafcolors("brown")`      |
-| Dark Grey  | \#66665D | `uafcolors("dark grey")`  |
-| Custard    | \#F6DFA4 | `uafcolors("custard")`    |
-| Light Blue | \#C4CFDA | `uafcolors("light blue")` |
-| Light Grey | \#C8C8C8 | `uafcolors("light grey")` |
+| Color      | Hex      | Code                        |
+|------------|----------|-----------------------------|
+| Blue       | \#236192 | `canhrcolors("blue")`       |
+| Gold       | \#FFCD00 | `canhrcolors("gold")`       |
+| Green      | \#71984A | `canhrcolors("green")`      |
+| Orange     | \#DF6A2E | `canhrcolors("orange")`     |
+| Cyan       | \#87D1E6 | `canhrcolors("cyan")`       |
+| Magenta    | \#F45197 | `canhrcolors("magenta")`    |
+| Dark Blue  | \#111C4E | `canhrcolors("dark blue")`  |
+| Brown      | \#774D28 | `canhrcolors("brown")`      |
+| Dark Grey  | \#66665D | `canhrcolors("dark grey")`  |
+| Custard    | \#F6DFA4 | `canhrcolors("custard")`    |
+| Light Blue | \#C4CFDA | `canhrcolors("light blue")` |
+| Light Grey | \#C8C8C8 | `canhrcolors("light grey")` |

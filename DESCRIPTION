@@ -1,15 +1,15 @@
-Package: uafcolors
-Title: University of Alaska Fairbanks Colors for R and Stata
+Package: canhrcolors
+Title: CANHR Colors for R and Stata
 Version: 1.0
 Authors@R: c(
     person("Raymond Dacosta", "Azadda", email = "rdazadda@alaska.edu", role = c("aut", "cre")),
     person("Andrew", "Grogan-Kaylor", role = "aut"),
     person("KyungSook", "Lee", role = "aut"))
-Description: Provides the official University of Alaska Fairbanks color palette
-    for use in R and Stata visualizations. Colors follow the UAF brand guidelines.
+Description: Provides the official CANHR color palette
+    for use in R and Stata visualizations.
 License: GPL-3
-URL: https://rdazadda.github.io/UAF-color-schemes/, https://github.com/rdazadda/UAF-color-schemes
-BugReports: https://github.com/rdazadda/UAF-color-schemes/issues
+URL: https://rdazadda.github.io/CANHR-color-schemes/, https://github.com/rdazadda/CANHR-color-schemes
+BugReports: https://github.com/rdazadda/CANHR-color-schemes/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

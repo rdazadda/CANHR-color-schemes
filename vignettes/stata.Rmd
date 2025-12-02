@@ -9,13 +9,13 @@ vignette: >
 
 ## Installation
 
-Install the UAF graph scheme in Stata:
+Install the CANHR graph scheme in Stata:
 
 ```stata
-net install uaf, from("https://raw.githubusercontent.com/rdazadda/UAF-color-schemes/main/")
+net install canhr, from("https://raw.githubusercontent.com/rdazadda/CANHR-color-schemes/main/")
 ```
 
-Or manually copy `scheme-uaf.scheme` to your Stata ado folder:
+Or manually copy `scheme-canhr.scheme` to your Stata ado folder:
 
 - Windows: `C:\ado\plus\s\`
 - Mac: `~/Library/Application Support/Stata/ado/plus/s/`
@@ -26,13 +26,13 @@ Or manually copy `scheme-uaf.scheme` to your Stata ado folder:
 Set the scheme for your session:
 
 ```stata
-set scheme uaf
+set scheme canhr
 ```
 
 Or set it permanently:
 
 ```stata
-set scheme uaf, permanently
+set scheme canhr, permanently
 ```
 
 ## Examples

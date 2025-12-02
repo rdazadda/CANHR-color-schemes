@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   basicuse: basicuse.html
   stata: stata.html
-last_built: 2025-11-29T14:49Z
+last_built: 2025-12-02T00:08Z
 urls:
-  reference: https://rdazadda.github.io/UAF-color-schemes/reference
-  article: https://rdazadda.github.io/UAF-color-schemes/articles
+  reference: https://rdazadda.github.io/CANHR-color-schemes/reference
+  article: https://rdazadda.github.io/CANHR-color-schemes/articles
