@@ -56,30 +56,31 @@ for more examples.
 
 ![The CANHR colors](man/figures/palette.png)
 
-| Color        | R name           | Hex       | RGB         |
-|--------------|------------------|-----------|-------------|
-| Blue         | `"blue"`         | `#236192` | 35 97 146   |
-| Gold         | `"gold"`         | `#FFCD00` | 255 205 0   |
-| Green        | `"green"`        | `#71984A` | 113 152 74  |
-| Orange       | `"orange"`       | `#DF6A2E` | 223 106 46  |
-| Cyan         | `"cyan"`         | `#87D1E6` | 135 209 230 |
-| Magenta      | `"magenta"`      | `#F45197` | 244 81 151  |
-| Dark Blue    | `"dark blue"`    | `#111C4E` | 17 28 78    |
-| Brown        | `"brown"`        | `#774D28` | 119 77 40   |
-| Dark Grey    | `"dark grey"`    | `#66665D` | 102 102 93  |
-| Custard      | `"custard"`      | `#F6DFA4` | 246 223 164 |
-| Light Blue   | `"light blue"`   | `#C4CFDA` | 196 207 218 |
-| Light Grey   | `"light grey"`   | `#C8C8C8` | 200 200 200 |
-| Deep Teal    | `"deep teal"`    | `#165B63` | 22 91 99    |
-| Tundra Green | `"tundra green"` | `#526B46` | 82 107 70   |
-| Warm Berry   | `"warm berry"`   | `#A43D52` | 164 61 82   |
-| Warm Ivory   | `"warm ivory"`   | `#F7F4EC` | 247 244 236 |
-| Charcoal     | `"charcoal"`     | `#263238` | 38 50 56    |
-| Muted Gold   | `"muted gold"`   | `#D6AA51` | 214 170 81  |
+| Color        | Hex       | RGB         |
+|--------------|-----------|-------------|
+| Blue         | `#236192` | 35 97 146   |
+| Gold         | `#FFCD00` | 255 205 0   |
+| Green        | `#71984A` | 113 152 74  |
+| Orange       | `#DF6A2E` | 223 106 46  |
+| Cyan         | `#87D1E6` | 135 209 230 |
+| Magenta      | `#F45197` | 244 81 151  |
+| Dark Blue    | `#111C4E` | 17 28 78    |
+| Brown        | `#774D28` | 119 77 40   |
+| Dark Grey    | `#66665D` | 102 102 93  |
+| Custard      | `#F6DFA4` | 246 223 164 |
+| Light Blue   | `#C4CFDA` | 196 207 218 |
+| Light Grey   | `#C8C8C8` | 200 200 200 |
+| Deep Teal    | `#165B63` | 22 91 99    |
+| Tundra Green | `#526B46` | 82 107 70   |
+| Warm Berry   | `#A43D52` | 164 61 82   |
+| Warm Ivory   | `#F7F4EC` | 247 244 236 |
+| Charcoal     | `#263238` | 38 50 56    |
+| Muted Gold   | `#D6AA51` | 214 170 81  |
 
-Stata has fifteen series styles, so the scheme gives the first fifteen colors
-to series automatically. Use the RGB values for the others, for example
-`color("214 170 81")` for muted gold.
+In R, get a color by its name, for example `canhrcolors("deep teal")`. In
+Stata, the scheme gives the first fifteen colors to graph series 1 to 15. For
+the rest, use the RGB values, for example `color("214 170 81")` for muted
+gold.
 
 ---
 
