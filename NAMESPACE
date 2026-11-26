@@ -2,5 +2,6 @@
 
 export(canhrcolors)
 export(scale_color_canhr)
+export(scale_colour_canhr)
 export(scale_fill_canhr)
 export(theme_canhr)

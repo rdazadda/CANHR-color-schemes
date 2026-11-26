@@ -1,81 +1,72 @@
-#' CANHR color palette
+canhr_palette <- c(
+  "blue"         = "#236192",
+  "gold"         = "#FFCD00",
+  "green"        = "#71984A",
+  "orange"       = "#DF6A2E",
+  "cyan"         = "#87D1E6",
+  "magenta"      = "#F45197",
+  "dark blue"    = "#111C4E",
+  "brown"        = "#774D28",
+  "dark grey"    = "#66665D",
+  "custard"      = "#F6DFA4",
+  "light blue"   = "#C4CFDA",
+  "light grey"   = "#C8C8C8",
+  "deep teal"    = "#165B63",
+  "tundra green" = "#526B46",
+  "warm berry"   = "#A43D52",
+  "warm ivory"   = "#F7F4EC",
+  "charcoal"     = "#263238",
+  "muted gold"   = "#D6AA51"
+)
+
+#' CANHR colors
 #'
-#' Use official CANHR colors in graphs.
+#' Get hex codes for the brand colors of the Center for Alaska Native Health
+#' Research (CANHR).
 #'
-#' @param x color name. Defaults to "all". Options: "blue", "gold", "green",
-#'   "orange", "cyan", "magenta", "dark blue", "brown", "dark grey", "custard",
-#'   "light blue", "light grey", "white"
-#' @return A character vector of hex color codes
-#' @examples
-#' barplot(1:5, col = canhrcolors())
-#' hist(iris$Petal.Width, col = canhrcolors("blue"))
-#' plot(iris$Petal.Length, iris$Petal.Width, col = canhrcolors("gold"), pch = 19)
+#' The full palette is returned in the order used by [scale_color_canhr()]
+#' and [scale_fill_canhr()].
+#'
+#' @param x A character vector of color names, or `"all"` (the default) for
+#'   the full palette. The names are `"blue"`, `"gold"`, `"green"`,
+#'   `"orange"`, `"cyan"`, `"magenta"`, `"dark blue"`, `"brown"`,
+#'   `"dark grey"`, `"custard"`, `"light blue"`, `"light grey"`,
+#'   `"deep teal"`, `"tundra green"`, `"warm berry"`, `"warm ivory"`,
+#'   `"charcoal"` and `"muted gold"`. Case is ignored, and `"gray"` can be
+#'   used for `"grey"`.
+#'
+#' @return An unnamed character vector of hex color codes.
+#' @seealso [scale_color_canhr()], [theme_canhr()]
 #' @export
+#' @examples
+#' canhrcolors()
+#' canhrcolors("blue")
+#' canhrcolors(c("deep teal", "warm berry"))
+#'
+#' barplot(1:6, col = canhrcolors()[1:6], border = NA)
+#' hist(faithful$waiting, col = canhrcolors("blue"), border = "white")
 canhrcolors <- function(x = "all") {
-  switch(x,
-         "all" = c("#236192", "#FFCD00", "#71984A", "#DF6A2E", "#87D1E6",
-                   "#F45197", "#111C4E", "#774D28", "#66665D", "#F6DFA4",
-                   "#C4CFDA", "#C8C8C8"),
-         "blue" = "#236192",
-         "gold" = "#FFCD00",
-         "green" = "#71984A",
-         "orange" = "#DF6A2E",
-         "cyan" = "#87D1E6",
-         "magenta" = "#F45197",
-         "dark blue" = "#111C4E",
-         "brown" = "#774D28",
-         "dark grey" = "#66665D",
-         "custard" = "#F6DFA4",
-         "light blue" = "#C4CFDA",
-         "light grey" = "#C8C8C8",
-         "white" = "#FFFFFF")
-}
+  if (!is.character(x) || anyNA(x)) {
+    stop("`x` must be a character vector of color names.", call. = FALSE)
+  }
 
-#' CANHR color scale for ggplot2
-#'
-#' @param ... Additional arguments passed to discrete_scale
-#' @return A ggplot2 scale
-#' @examples
-#' library(ggplot2)
-#' ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
-#'   geom_point() + scale_color_canhr()
-#' @export
-scale_color_canhr <- function(...) {
-  ggplot2::discrete_scale("colour", "canhr",
-                          function(n) canhrcolors()[1:n], ...)
-}
+  key <- gsub("gray", "grey", tolower(x), fixed = TRUE)
+  if (identical(key, "all")) {
+    return(unname(canhr_palette))
+  }
 
-#' CANHR fill scale for ggplot2
-#'
-#' @param ... Additional arguments passed to discrete_scale
-#' @return A ggplot2 scale
-#' @examples
-#' library(ggplot2)
-#' ggplot(mpg, aes(class, fill = class)) +
-#'   geom_bar() + scale_fill_canhr()
-#' @export
-scale_fill_canhr <- function(...) {
-  ggplot2::discrete_scale("fill", "canhr",
-                          function(n) canhrcolors()[1:n], ...)
-}
-
-#' CANHR theme for ggplot2
-#'
-#' @param base_size Base font size
-#' @param base_family Base font family
-#' @return A ggplot2 theme
-#' @examples
-#' library(ggplot2)
-#' ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
-#'   geom_point(color = canhrcolors("blue")) + theme_canhr()
-#' @export
-theme_canhr <- function(base_size = 11, base_family = "") {
-  ggplot2::theme_minimal(base_size = base_size, base_family = base_family) +
-    ggplot2::theme(
-      plot.title = ggplot2::element_text(color = "#236192", face = "bold"),
-      axis.title = ggplot2::element_text(color = "#236192"),
-      axis.text = ggplot2::element_text(color = "#66665D"),
-      panel.grid.major = ggplot2::element_line(color = "#C8C8C8", linewidth = 0.3),
-      panel.grid.minor = ggplot2::element_blank()
+  unknown <- x[!key %in% names(canhr_palette)]
+  if (length(unknown) > 0) {
+    stop(
+      "Unknown CANHR color: ", quoted(unknown), ".\n",
+      "Available colors: ", quoted(names(canhr_palette)), ".",
+      call. = FALSE
     )
+  }
+
+  unname(canhr_palette[key])
+}
+
+quoted <- function(x) {
+  paste(encodeString(x, quote = "\""), collapse = ", ")
 }

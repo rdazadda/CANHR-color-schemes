@@ -3,4 +3,8 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-^\.github$
+^make_logo\.R$
+^make_stata_graphs\.do$
+^scheme-canhr\.scheme$
+^canhr\.pkg$
+^stata\.toc$

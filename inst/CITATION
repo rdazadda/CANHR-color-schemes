@@ -1,20 +1,20 @@
 citHeader("To cite canhrcolors in publications use:")
 
 bibentry(
-  bibtype  = "Manual",
-  title    = "{canhrcolors}: CANHR Colors for {R} and {Stata}",
-  author   = c(
-    person("Raymond Dacosta", "Azadda", role = c("aut", "cre")),
-    person("Andrew", "Grogan-Kaylor", role = "aut"),
-    person("KyungSook", "Lee", role = "aut")
+  bibtype = "Manual",
+  title = "{canhrcolors}: CANHR Colors for {R} and {Stata}",
+  author = c(
+    person("Raymond Dacosta", "Azadda"),
+    person("Andrew", "Grogan-Kaylor"),
+    person("KyungSook", "Lee")
   ),
-  year     = "2025",
-  note     = "R package version 1.0",
-  url      = "https://github.com/rdazadda/CANHR-color-schemes",
-  textVersion = paste(
-    "Azadda, R. D., Grogan-Kaylor, A., & Lee, K. (2025).",
-    "canhrcolors: CANHR Colors for R and Stata.",
-    "R package version 1.0.",
+  year = "2026",
+  note = paste("R package version", meta$Version),
+  url = "https://github.com/rdazadda/CANHR-color-schemes",
+  textVersion = paste0(
+    "Azadda, R. D., Grogan-Kaylor, A., & Lee, K. (2026). ",
+    "canhrcolors: CANHR Colors for R and Stata. ",
+    "R package version ", meta$Version, ". ",
     "https://github.com/rdazadda/CANHR-color-schemes"
   )
 )

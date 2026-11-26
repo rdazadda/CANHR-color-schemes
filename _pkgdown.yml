@@ -1,21 +1,55 @@
 url: https://rdazadda.github.io/CANHR-color-schemes/
+llm-docs: false
+
 template:
   bootstrap: 5
   bslib:
-    primary: "#236192"
+    bg: "#FFFFFF"
+    fg: "#111111"
+    primary: "#111111"
+    link-color: "#111111"
+    link-hover-color: "#555555"
+    border-radius: 0
+    border-radius-sm: 0
+    border-radius-lg: 0
+    font-size-base: 1.0625rem
+    line-height-base: 1.55
+    headings-font-weight: 600
     base_font:
       google: Inter
+    heading_font:
+      google: Inter Tight
     code_font:
-      google: JetBrains Mono
+      google: IBM Plex Mono
 
 home:
   title: CANHR Colors for R and Stata
+  description: Brand colors of the Center for Alaska Native Health Research for R and Stata graphs.
+  sidebar: false
 
 navbar:
-  bg: light
   structure:
-    left: [intro, reference, articles]
-    right: [github]
+    left: []
+    right: [basicuse, stata, reference, github]
+  components:
+    basicuse:
+      text: Basic Use
+      href: articles/basicuse.html
+    stata:
+      text: Stata Usage
+      href: articles/stata.html
+    github:
+      text: GitHub
+      href: https://github.com/rdazadda/CANHR-color-schemes
+
+reference:
+- title: Colors
+  contents:
+  - canhrcolors
+- title: ggplot2
+  contents:
+  - scale_color_canhr
+  - theme_canhr
 
 articles:
 - title: Articles
@@ -27,6 +61,5 @@ articles:
 footer:
   structure:
     left: [developed]
-    right: [source]
   components:
-    developed: Developed by the Numbers Team at CANHR
+    developed: Developed by the Numbers Team at CANHR. Site built with pkgdown.

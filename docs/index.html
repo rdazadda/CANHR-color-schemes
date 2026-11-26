@@ -14,13 +14,14 @@
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/Inter-0.4.10/font.css" rel="stylesheet">
-<link href="deps/JetBrains_Mono-0.4.10/font.css" rel="stylesheet">
+<link href="deps/IBM_Plex_Mono-0.4.10/font.css" rel="stylesheet">
+<link href="deps/Inter_Tight-0.4.10/font.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
-<meta property="og:title" content="CANHR Colors for R and Stata">
-<meta name="description" content="Provides the official CANHR color palette for use in R and Stata visualizations.">
-<meta property="og:description" content="Provides the official CANHR color palette for use in R and Stata visualizations.">
+<script src="extra.js"></script><meta property="og:title" content="CANHR Colors for R and Stata">
+<meta name="description" content="Brand colors of the Center for Alaska Native Health Research for R and Stata graphs.">
+<meta property="og:description" content="Brand colors of the Center for Alaska Native Health Research for R and Stata graphs.">
 <meta property="og:image" content="https://rdazadda.github.io/CANHR-color-schemes/logo.png">
 </head>
 <body>
@@ -29,9 +30,9 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <a class="navbar-brand me-2" href="index.html">canhrcolors</a>
+    <a class="navbar-brand me-2" href="index.html"><img class="brand-strip" src="strip.svg" alt="" width="72" height="24"><span><b>canhr</b>colors</span></a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,18 +40,12 @@
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
-      <ul class="navbar-nav me-auto">
-<li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
-<li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="articles/basicuse.html">Basic Use</a></li>
-    <li><a class="dropdown-item" href="articles/stata.html">Stata Usage</a></li>
-  </ul>
-</li>
-      </ul>
+      <ul class="navbar-nav me-auto"></ul>
 <ul class="navbar-nav">
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/rdazadda/CANHR-color-schemes/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="nav-link" href="articles/basicuse.html">Basic Use</a></li>
+<li class="nav-item"><a class="nav-link" href="articles/stata.html">Stata Usage</a></li>
+<li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/rdazadda/CANHR-color-schemes">GitHub</a></li>
       </ul>
 </div>
 
@@ -58,265 +53,173 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
+  <main id="main" class="col-md-9"><div class="home-hero">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="canhr-colors-">CANHR Colors <img src="reference/figures/canhrcolors.png" align="right" width="200"><a class="anchor" aria-label="anchor" href="#canhr-colors-"></a>
+<img src="logo.png" class="logo" alt=""><h1 class="home-title">
+CANHR<br>colors
 </h1>
 </div>
-<p>CANHR color scheme for <strong>R</strong> and <strong>Stata</strong>.</p>
-<hr>
-<div class="section level2">
-<h2 id="r-package">R Package<a class="anchor" aria-label="anchor" href="#r-package"></a>
-</h2>
-<div class="section level3">
-<h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
-</h3>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rdazadda/CANHR-color-schemes"</span><span class="op">)</span></span></code></pre></div>
+<div class="home-intro">
+<p>
+Brand colors for R and Stata graphs.
+</p>
+<p class="home-meta">
+Center for Alaska Native Health Research · canhrcolors 1.1.0
+</p>
 </div>
-<div class="section level3">
-<h3 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
-</h3>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rdazadda.github.io/CANHR-color-schemes/">canhrcolors</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># All colors</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html" class="external-link">barplot</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, col <span class="op">=</span> <span class="fu">canhrcolors</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Single color</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span>, col <span class="op">=</span> <span class="fu">canhrcolors</span><span class="op">(</span><span class="st">"blue"</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># ggplot2</span></span>
+</div>
+<ol class="home-palette" aria-label="The CANHR colors">
+<li style="background: #236192" title="Blue #236192">
+<span class="visually-hidden">Blue #236192</span>
+</li>
+<li style="background: #FFCD00" title="Gold #FFCD00">
+<span class="visually-hidden">Gold #FFCD00</span>
+</li>
+<li style="background: #71984A" title="Green #71984A">
+<span class="visually-hidden">Green #71984A</span>
+</li>
+<li style="background: #DF6A2E" title="Orange #DF6A2E">
+<span class="visually-hidden">Orange #DF6A2E</span>
+</li>
+<li style="background: #87D1E6" title="Cyan #87D1E6">
+<span class="visually-hidden">Cyan #87D1E6</span>
+</li>
+<li style="background: #F45197" title="Magenta #F45197">
+<span class="visually-hidden">Magenta #F45197</span>
+</li>
+<li style="background: #111C4E" title="Dark Blue #111C4E">
+<span class="visually-hidden">Dark Blue #111C4E</span>
+</li>
+<li style="background: #774D28" title="Brown #774D28">
+<span class="visually-hidden">Brown #774D28</span>
+</li>
+<li style="background: #66665D" title="Dark Grey #66665D">
+<span class="visually-hidden">Dark Grey #66665D</span>
+</li>
+<li style="background: #F6DFA4" title="Custard #F6DFA4">
+<span class="visually-hidden">Custard #F6DFA4</span>
+</li>
+<li style="background: #C4CFDA" title="Light Blue #C4CFDA">
+<span class="visually-hidden">Light Blue #C4CFDA</span>
+</li>
+<li style="background: #C8C8C8" title="Light Grey #C8C8C8">
+<span class="visually-hidden">Light Grey #C8C8C8</span>
+</li>
+<li style="background: #165B63" title="Deep Teal #165B63">
+<span class="visually-hidden">Deep Teal #165B63</span>
+</li>
+<li style="background: #526B46" title="Tundra Green #526B46">
+<span class="visually-hidden">Tundra Green #526B46</span>
+</li>
+<li style="background: #A43D52" title="Warm Berry #A43D52">
+<span class="visually-hidden">Warm Berry #A43D52</span>
+</li>
+<li style="background: #F7F4EC" title="Warm Ivory #F7F4EC">
+<span class="visually-hidden">Warm Ivory #F7F4EC</span>
+</li>
+<li style="background: #263238" title="Charcoal #263238">
+<span class="visually-hidden">Charcoal #263238</span>
+</li>
+<li style="background: #D6AA51" title="Muted Gold #D6AA51">
+<span class="visually-hidden">Muted Gold #D6AA51</span>
+</li>
+</ol>
+<section class="home-row"><h2>
+Install
+</h2>
+<div class="home-body home-cols">
+<div>
+<p class="label">
+R
+</p>
+<pre><code><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/install-deprecated.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rdazadda/CANHR-color-schemes"</span><span class="op">)</span></span></code></pre>
+</div>
+<div>
+<p class="label">
+Stata
+</p>
+<pre class="wrap"><code>net install canhr, from("https://raw.githubusercontent.com/rdazadda/CANHR-color-schemes/main/") replace</code></pre>
+</div>
+</div>
+</section><section class="home-row"><h2>
+Use
+</h2>
+<div class="home-body">
+<div class="home-cols">
+<div>
+<p class="label">
+R
+</p>
+<pre><code><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rdazadda.github.io/CANHR-color-schemes/">canhrcolors</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">Sepal.Length</span>, <span class="va">Sepal.Width</span>, color <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">scale_color_canhr</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">theme_canhr</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>See <a href="articles/basicuse.html">Basic Use</a> for more examples.</p>
-<hr>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">displ</span>, <span class="va">hwy</span>, color <span class="op">=</span> <span class="va">drv</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="reference/scale_color_canhr.html">scale_color_canhr</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"4WD"</span>, <span class="st">"Front"</span>, <span class="st">"Rear"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="reference/theme_canhr.html">theme_canhr</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Fuel economy by engine size"</span>,</span>
+<span>    x <span class="op">=</span> <span class="st">"Engine displacement (litres)"</span>,</span>
+<span>    y <span class="op">=</span> <span class="st">"Highway miles per gallon"</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"Drive"</span></span>
+<span>  <span class="op">)</span></span></code></pre>
+</div>
+<div>
+<p><img src="articles/basicuse_files/figure-html/scatter-1.png" alt="Scatter plot of highway mileage against engine size, colored by drive type with scale_color_canhr() and styled with theme_canhr()"></p>
 </div>
 </div>
-<div class="section level2">
-<h2 id="stata-scheme">Stata Scheme<a class="anchor" aria-label="anchor" href="#stata-scheme"></a>
+<div class="home-cols">
+<div>
+<p class="label">
+Stata
+</p>
+<pre><code>set scheme canhr
+
+sysuse citytemp, clear
+graph bar (mean) tempjan tempjuly, over(region) ///
+    title("Average temperature by region") ///
+    ytitle("Degrees Fahrenheit") ///
+    legend(order(1 "January" 2 "July"))</code></pre>
+<p class="label">
+Add <code>, permanently</code> to <code>set scheme</code> to make it your default.
+</p>
+</div>
+<div>
+<p><img src="articles/figures/bar.png" alt="Stata bar chart of average January and July temperatures by region, drawn with the canhr scheme"></p>
+</div>
+</div>
+</div>
+</section><section class="home-row"><h2>
+Read
 </h2>
-<div class="section level3">
-<h3 id="installation-1">Installation<a class="anchor" aria-label="anchor" href="#installation-1"></a>
-</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>net install canhr, from(<span class="st">"https://raw.githubusercontent.com/rdazadda/CANHR-color-schemes/main/"</span>)</span></code></pre></div>
+<div class="home-body home-cols">
+<div>
+<a class="home-link" href="articles/basicuse.html">Basic Use →</a>
+<p class="label">
+Get colors by name and use them in ggplot2 and base R graphics.
+</p>
 </div>
-<div class="section level3">
-<h3 id="usage-1">Usage<a class="anchor" aria-label="anchor" href="#usage-1"></a>
-</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode stata"><code class="sourceCode stata"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">set</span> <span class="dv">scheme</span> canhr</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="kw">sysuse</span> auto, <span class="kw">clear</span></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="kw">scatter</span> mpg <span class="kw">weight</span></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="kw">mean</span>) mpg, <span class="bn">over</span>(foreign)</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="kw">histogram</span> mpg</span></code></pre></div>
-<p>See <a href="articles/stata.html">Stata Usage</a> for more examples.</p>
-<hr>
+<div>
+<a class="home-link" href="articles/stata.html">Stata Usage →</a>
+<p class="label">
+Set the canhr scheme and use the colors in Stata graphs.
+</p>
 </div>
 </div>
-<div class="section level2">
-<h2 id="colors">Colors<a class="anchor" aria-label="anchor" href="#colors"></a>
-</h2>
-<table class="table">
-<tr>
-<th>
-Color
-</th>
-<th>
-Hex
-</th>
-<th>
-Preview
-</th>
-</tr>
-<tr>
-<td>
-Blue
-</td>
-<td>
-#236192
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#236192;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Gold
-</td>
-<td>
-#FFCD00
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#FFCD00;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Green
-</td>
-<td>
-#71984A
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#71984A;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Orange
-</td>
-<td>
-#DF6A2E
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#DF6A2E;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Cyan
-</td>
-<td>
-#87D1E6
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#87D1E6;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Magenta
-</td>
-<td>
-#F45197
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#F45197;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Dark Blue
-</td>
-<td>
-#111C4E
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#111C4E;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Brown
-</td>
-<td>
-#774D28
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#774D28;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Dark Grey
-</td>
-<td>
-#66665D
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#66665D;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Custard
-</td>
-<td>
-#F6DFA4
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#F6DFA4;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Light Blue
-</td>
-<td>
-#C4CFDA
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#C4CFDA;border-radius:3px;"></span>
-</td>
-</tr>
-<tr>
-<td>
-Light Grey
-</td>
-<td>
-#C8C8C8
-</td>
-<td>
-<span style="display:inline-block;width:60px;height:20px;background:#C8C8C8;border-radius:3px;"></span>
-</td>
-</tr>
-</table>
-<hr>
-<p>Developed by the Numbers Team at CANHR - Center for Alaska Native Health Research</p>
-</div>
-</div>
-  </main><aside class="col-md-3"><div class="links">
-<h2 data-toc-skip>Links</h2>
-<ul class="list-unstyled">
-<li><a href="https://github.com/rdazadda/CANHR-color-schemes/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/rdazadda/CANHR-color-schemes/issues" class="external-link">Report a bug</a></li>
-</ul>
-</div>
-
-<div class="license">
-<h2 data-toc-skip>License</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></li>
-</ul>
-</div>
-
-
-<div class="citation">
-<h2 data-toc-skip>Citation</h2>
-<ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing canhrcolors</a></li>
-</ul>
-</div>
-
-<div class="developers">
-<h2 data-toc-skip>Developers</h2>
-<ul class="list-unstyled">
-<li>Raymond Dacosta Azadda <br><small class="roles"> Author, maintainer </small>   </li>
-<li>Andrew Grogan-Kaylor <br><small class="roles"> Author </small>   </li>
-<li>KyungSook Lee <br><small class="roles"> Author </small>   </li>
-</ul>
-</div>
-
-
-
-  </aside>
+</section></main><aside class="col-md-3"></aside>
 </div>
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by the Numbers Team at CANHR</p>
+  <p>Developed by the Numbers Team at CANHR. Site built with pkgdown.</p>
 </div>
 
-<div class="pkgdown-footer-right">
-  <p>NULL</p>
-</div>
-
-    </footer>
+<nav class="pkgdown-footer-right" aria-label="Footer"><a href="https://github.com/rdazadda/CANHR-color-schemes" class="external-link">GitHub</a>
+  <a href="news/index.html">News</a>
+  <a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">License</a>
+  <a href="authors.html#citation">Citation</a>
+</nav></footer>
 </div>
 
 

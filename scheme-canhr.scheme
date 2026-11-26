@@ -1,159 +1,92 @@
-* CANHR Color Scheme for Stata
-* Center for Alaska Native Health Research Official Colors
-* scheme-canhr.scheme
+* CANHR graph scheme: the brand colors of the Center for Alaska Native Health
+* Research on top of Stata's s2color scheme.
+*
+*   p1   Blue           35  97 146   #236192
+*   p2   Gold          255 205   0   #FFCD00
+*   p3   Green         113 152  74   #71984A
+*   p4   Orange        223 106  46   #DF6A2E
+*   p5   Cyan          135 209 230   #87D1E6
+*   p6   Magenta       244  81 151   #F45197
+*   p7   Dark Blue      17  28  78   #111C4E
+*   p8   Brown         119  77  40   #774D28
+*   p9   Dark Grey     102 102  93   #66665D
+*   p10  Custard       246 223 164   #F6DFA4
+*   p11  Light Blue    196 207 218   #C4CFDA
+*   p12  Light Grey    200 200 200   #C8C8C8
+*   p13  Deep Teal      22  91  99   #165B63
+*   p14  Tundra Green   82 107  70   #526B46
+*   p15  Warm Berry    164  61  82   #A43D52
+*        Warm Ivory    247 244 236   #F7F4EC
+*        Charcoal       38  50  56   #263238
+*        Muted Gold    214 170  81   #D6AA51
+*
+* Stata has fifteen series styles (p1-p15), so colors after the fifteenth are
+* not assigned to series automatically. Use their RGB values directly, for
+* example color("214 170 81").
 
 #include s2color
-
-* Color definitions (RGB format)
-* Blue:       35  97 146  (#236192)
-* Gold:      255 205   0  (#FFCD00)
-* Green:     113 152  74  (#71984A)
-* Orange:    223 106  46  (#DF6A2E)
-* Cyan:      135 209 230  (#87D1E6)
-* Magenta:   244  81 151  (#F45197)
-* Dark Blue:  17  28  78  (#111C4E)
-* Brown:     119  77  40  (#774D28)
-* Dark Grey: 101 102  93  (#66665D)
-* Custard:   246 223 164  (#F6DFA4)
-* Light Blue:196 207 218  (#C4CFDA)
-* Light Grey:200 200 200  (#C8C8C8)
 
 sequence 1210
 label "canhr"
 
-* Background colors
-color background             white
-color plotregion             white
-color matrix_plotregion      white
-color legend                 white
-color heading                "35 97 146"
-color subheading             "35 97 146"
-color body                   black
-color small_body             black
-color key_label              black
-color axis_title             "35 97 146"
+* Series colors. Lines, markers, bars, boxes, areas and pie slices all take
+* their color from these.
+color p1    "35 97 146"
+color p2    "255 205 0"
+color p3    "113 152 74"
+color p4    "223 106 46"
+color p5    "135 209 230"
+color p6    "244 81 151"
+color p7    "17 28 78"
+color p8    "119 77 40"
+color p9    "102 102 93"
+color p10   "246 223 164"
+color p11   "196 207 218"
+color p12   "200 200 200"
+color p13   "22 91 99"
+color p14   "82 107 70"
+color p15   "164 61 82"
 
-* Line and symbol colors for plots
-color p1                     "35 97 146"
-color p2                     "255 205 0"
-color p3                     "113 152 74"
-color p4                     "223 106 46"
-color p5                     "135 209 230"
-color p6                     "244 81 151"
-color p7                     "17 28 78"
-color p8                     "119 77 40"
-color p9                     "101 102 93"
-color p10                    "246 223 164"
-color p11                    "196 207 218"
-color p12                    "200 200 200"
+* s2color fills areas at 80%, pie slices at 90% and boxes at 50% intensity,
+* which washes the colors out. Use the full colors, and draw box-plot medians
+* as thin black lines so they stay visible on a solid box.
+intensity p     full
+intensity pie   full
+intensity box   full
+medtypestyle boxplot   cline
+linestyle box_median   foreground
 
-* Line colors
-color p1line                 "35 97 146"
-color p2line                 "255 205 0"
-color p3line                 "113 152 74"
-color p4line                 "223 106 46"
-color p5line                 "135 209 230"
-color p6line                 "244 81 151"
-color p7line                 "17 28 78"
-color p8line                 "119 77 40"
-color p9line                 "101 102 93"
-color p10line                "246 223 164"
-color p11line                "196 207 218"
-color p12line                "200 200 200"
+* Background and text
+color background         white
+color plotregion         white
+color matrix_plotregion  white
+color legend             white
+color legend_line        white
+color heading            "35 97 146"
+color subheading         "35 97 146"
+color axis_title         "35 97 146"
+color body               black
+color small_body         black
+color key_label          black
 
-* Area/fill colors
-color p1area                 "35 97 146"
-color p2area                 "255 205 0"
-color p3area                 "113 152 74"
-color p4area                 "223 106 46"
-color p5area                 "135 209 230"
-color p6area                 "244 81 151"
-color p7area                 "17 28 78"
-color p8area                 "119 77 40"
-color p9area                 "101 102 93"
-color p10area                "246 223 164"
-color p11area                "196 207 218"
-color p12area                "200 200 200"
+* Axes and grid lines
+color axisline           "102 102 93"
+color tick               "102 102 93"
+color tick_label         "102 102 93"
+color grid               "200 200 200"
+color major_grid         "200 200 200"
+color minor_grid         white
+anglestyle vertical_tick horizontal
 
-* Bar colors
-color p1bar                  "35 97 146"
-color p2bar                  "255 205 0"
-color p3bar                  "113 152 74"
-color p4bar                  "223 106 46"
-color p5bar                  "135 209 230"
-color p6bar                  "244 81 151"
-color p7bar                  "17 28 78"
-color p8bar                  "119 77 40"
-color p9bar                  "101 102 93"
-color p10bar                 "246 223 164"
-color p11bar                 "196 207 218"
-color p12bar                 "200 200 200"
-
-* Pie colors
-color p1pie                  "35 97 146"
-color p2pie                  "255 205 0"
-color p3pie                  "113 152 74"
-color p4pie                  "223 106 46"
-color p5pie                  "135 209 230"
-color p6pie                  "244 81 151"
-color p7pie                  "17 28 78"
-color p8pie                  "119 77 40"
-color p9pie                  "101 102 93"
-color p10pie                 "246 223 164"
-color p11pie                 "196 207 218"
-color p12pie                 "200 200 200"
-
-* Box plot colors
-color p1box                  "35 97 146"
-color p2box                  "255 205 0"
-color p3box                  "113 152 74"
-color p4box                  "223 106 46"
-color p5box                  "135 209 230"
-color p6box                  "244 81 151"
-
-* Marker symbols
-color p1markline             "35 97 146"
-color p2markline             "255 205 0"
-color p3markline             "113 152 74"
-color p4markline             "223 106 46"
-color p5markline             "135 209 230"
-color p6markline             "244 81 151"
-
-color p1markfill             "35 97 146"
-color p2markfill             "255 205 0"
-color p3markfill             "113 152 74"
-color p4markfill             "223 106 46"
-color p5markfill             "135 209 230"
-color p6markfill             "244 81 151"
-
-* Grid lines
-color major_grid             "200 200 200"
-color minor_grid             white
-color grid                   "200 200 200"
-
-* Axis
-color tick                   "101 102 93"
-color tick_label             "101 102 93"
-color axisline               "101 102 93"
-
-* Histogram
-color histogram              "35 97 146"
-color histback               white
-
-* CI plots
-color ci_line                "35 97 146"
-color ci_area                "196 207 218"
-color ci_arealine            "35 97 146"
-
-* Matrix plots
-color matrixmarkline         "35 97 146"
-color mat_label_box          white
-
-* Reference lines
-color refline                "101 102 93"
-color refmarker              "35 97 146"
-
-* Legend
-color legend_line            white
-color clegend                white
-color clegend_line           white
+* Other plot elements
+color histogram          "35 97 146"
+color histback           white
+color ci_line            "35 97 146"
+color ci_area            "196 207 218"
+color ci_arealine        "35 97 146"
+color refline            "102 102 93"
+color refmarker          "35 97 146"
+color matrixmarkline     "35 97 146"
+color mat_label_box      white
+color clegend            white
+color clegend_line       white

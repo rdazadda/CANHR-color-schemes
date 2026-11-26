@@ -1,22 +1,29 @@
 Package: canhrcolors
 Title: CANHR Colors for R and Stata
-Version: 1.0
+Version: 1.1.0
 Authors@R: c(
     person("Raymond Dacosta", "Azadda", email = "rdazadda@alaska.edu", role = c("aut", "cre")),
     person("Andrew", "Grogan-Kaylor", role = "aut"),
-    person("KyungSook", "Lee", role = "aut"))
-Description: Provides the official CANHR color palette
-    for use in R and Stata visualizations.
+    person("KyungSook", "Lee", role = "aut")
+  )
+Description: The brand colors of the Center for Alaska Native Health
+    Research (CANHR) for R graphics: the colors as hex codes, 'ggplot2'
+    color and fill scales, and a matching 'ggplot2' theme. A companion Stata
+    graph scheme is available from the package's GitHub repository.
 License: GPL-3
-URL: https://rdazadda.github.io/CANHR-color-schemes/, https://github.com/rdazadda/CANHR-color-schemes
+URL: https://rdazadda.github.io/CANHR-color-schemes/,
+    https://github.com/rdazadda/CANHR-color-schemes
 BugReports: https://github.com/rdazadda/CANHR-color-schemes/issues
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+Depends:
+    R (>= 3.5.0)
+Imports:
+    ggplot2 (>= 3.5.0)
 Suggests:
     knitr,
     rmarkdown,
-    ggplot2,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
-Depends: R (>= 3.3)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0

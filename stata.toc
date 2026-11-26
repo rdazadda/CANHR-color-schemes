@@ -1,8 +1,8 @@
 v 3
-d CANHR Color Scheme for Stata
-d Center for Alaska Native Health Research official colors
+d CANHR graph scheme for Stata
+d Brand colors of the Center for Alaska Native Health Research (CANHR)
 d
 d Authors: Raymond Dacosta Azadda, Andrew Grogan-Kaylor, KyungSook Lee
-d Contact: rdazadda@alaska.edu
+d Support: rdazadda@alaska.edu
 d
 p canhr CANHR graph scheme

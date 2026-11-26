@@ -1,11 +1,13 @@
 v 3
-d CANHR Color Scheme for Stata
+d canhr: CANHR graph scheme for Stata
 d
-d Center for Alaska Native Health Research official color palette for Stata graphs.
+d The brand colors of the Center for Alaska Native Health Research (CANHR)
+d as a Stata graph scheme. After installing, type
+d     set scheme canhr
 d
 d Authors: Raymond Dacosta Azadda, Andrew Grogan-Kaylor, KyungSook Lee
 d Support: rdazadda@alaska.edu
 d
-d Distribution-Date: 20251129
+d Distribution-Date: 20261125
 d
 f scheme-canhr.scheme
