@@ -103,6 +103,7 @@ a:hover {
 .navbar .nav-link {
   font-size: 17px;
   color: #FFFFFF !important;
+  background: none !important;
   padding: 0 !important;
   margin-left: 32px;
   text-decoration: none;
@@ -116,31 +117,54 @@ a:hover {
   text-underline-offset: 3px;
 }
 
+/* Phones and tablets: a menu button that opens the links as a list */
 .navbar-toggler {
-  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
   padding: 0;
+  border: 0;
 }
 
-/* Four links fit on a phone, so show them on their own row instead of a menu */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 2px;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' d='M4 7h16M4 12h16M4 17h16'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' d='M6 6l12 12M18 6L6 18'/%3e%3c/svg%3e");
+}
+
 @media (max-width: 991.98px) {
-  .navbar-toggler {
-    display: none;
+  .navbar {
+    padding: 16px 0;
   }
 
   .navbar-collapse {
-    display: block !important;
-    flex-basis: 100%;
-    margin: 16px 0 0 !important;
+    margin: 12px 0 0 !important;
   }
 
-  .navbar .navbar-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px 24px;
+  .navbar .nav-item + .nav-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .navbar .nav-link {
     margin: 0;
+    padding: 14px 0 !important;
+    font-size: 18px;
   }
 }
 
